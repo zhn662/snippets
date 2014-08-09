@@ -7,8 +7,6 @@ var typeUtils = {
                 type = 'undefined';
             } else if (obj === null) {
                 type = 'null';
-            } else if (this.isArguments(obj)) {
-                type = 'arguments';
             }
         }
         return type;
@@ -19,7 +17,7 @@ var typeUtils = {
     isArray : function(obj) {
         return Array.isArray && Array.isArray(obj) || this.isType('array', obj);
         // return obj instanceof Array;
-        // return obj.constructor === 'Array';
+        // return obj.constructor === Array;
         // return this.getType(obj) === 'array';
     },
     isArrayLike : function(obj) {
@@ -29,10 +27,13 @@ var typeUtils = {
     isArguments : function(obj) {
         // 判断变量的类型是否是 Arguments
         return obj && obj.callee && this.isArrayLike(obj) ? true : false;
+        // return this.getType(obj) === 'arguments';
+        // return this.isType('arguments', obj);
     },
     isFunction : function(obj) {
         return this.isType('function', obj);
-        // return obj.constructor === 'Function';
+        // return typeof obj === 'function';
+        // return obj.constructor === Function;
         // return this.getType(obj) === 'function';
     },
     isObject : function(obj) {
