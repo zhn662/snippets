@@ -1,4 +1,4 @@
-var localStorage = {
+var localStorageUtils = {
     isSupports : function() {
         return ('localStorage' in window) && window.localStorage !== null;
     },
