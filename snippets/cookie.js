@@ -19,7 +19,7 @@ var cookieUtils = {
         /**
          * 获取指定名称的cookie值
          */
-        var regexp = new RegExp("(?:^|;+|\\s+)" + name + "=([^;]*)");
+        var regexp = new RegExp('(?:^|;+|\\s+)' + name + '=([^;]*)');
         var matches = window.document.cookie.match(regexp);
         return !matches ? '' : matches[1];
     },
