@@ -10,7 +10,7 @@ var arrayUtils = {
             var args = Array.prototype.slice.call(arguments, 1);
             return Array.prototype.indexOf.apply(arguments[0], args);
         } else {
-            if (index == null) {
+            if (index === null) {
                 index = 0;
             } else if (index < 0) {
                 index = Math.max(0, arr.length + index);
@@ -31,7 +31,7 @@ var arrayUtils = {
             var args = Array.prototype.slice.call(arguments, 1);
             return Array.prototype.lastIndexOf.apply(arguments[0], args);
         } else {
-            if (index == null) {
+            if (index === null) {
                 index = arr.length - 1;
             } else if (index < 0) {
                 index = Math.max(0, arr.length + index);

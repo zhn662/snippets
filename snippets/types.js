@@ -51,9 +51,9 @@ var typeUtils = {
         return this.isObject(obj) && !this.isWindow(obj) && Object.getPrototypeOf(obj) === Object.prototype;
     },
     isWindow : function(obj) {
-        return obj != null && obj == obj.window;
+        return obj !== null && obj == obj.window;
     },
     isDocument : function(obj) {
-        return obj != null && obj.nodeType == obj.DOCUMENT_NODE;
+        return obj !== null && obj.nodeType == obj.DOCUMENT_NODE;
     }
 };

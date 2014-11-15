@@ -71,9 +71,8 @@ var baseUtils = {
         switch(typeof obj) {
         case 'undefined':
             return true;
-            break;
         case 'string':
-            if (obj.replace(/^\s+|\s+$/g, '').length == 0)
+            if (obj.replace(/^\s+|\s+$/g, '').length === 0)
                 return true;
             break;
         case 'boolean':
@@ -93,7 +92,6 @@ var baseUtils = {
                 return false;
             }
             return true;
-            break;
         default:
             break;
         }
